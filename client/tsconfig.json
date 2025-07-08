@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Specify ECMAScript target version
+    "lib": ["DOM", "DOM.Iterable", "ES2022"], // Include libraries
+    "allowJs": true, // Allow JavaScript files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
+    "module": "ESNext", // Specify module code generation
+    "esModuleInterop": true, // Enable compatibility with CommonJS modules
+    "jsx": "react-jsx", // Specify JSX code generation
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure each file can be safely transpiled
+    "baseUrl": ".", // Base directory for resolving non-relative module names
+    "types": ["vite/client"], // Include types for Vite client
+
+    /* Bundler mode */
+    "moduleResolution": "bundler", // Resolve modules using Node.js style
+    "allowImportingTsExtensions": true, // Allow importing TypeScript files with .ts extension
+    "verbatimModuleSyntax": true, // Use verbatim module syntax for imports
+    "noEmit": true, // Do not emit compiled files
+
+     /* Linting */
+     "skipLibCheck": true, // Skip type checking of declaration files
+     "strict": true, // Enable all strict type-checking options
+    "noUnusedLocals": true, // Report errors on unused local variables
+     "noUnusedParameters": true, // Report errors on unused parameters
+     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+     "noUncheckedSideEffectImports": true, // Report errors for imports that have side effects
+    
+     "paths": {
+      "@/*": ["./src/*"], // Alias for src directory
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"], // Include files in the src directory
+  "exclude": ["node_modules"] // Exclude node_modules
+}
