@@ -27,7 +27,7 @@
      "noUncheckedSideEffectImports": true, // Report errors for imports that have side effects
     
      "paths": {
-      "@/*": ["./src/*"], // Alias for src directory
+      "@/*": ["src/*"], // Alias for src directory
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"], // Include files in the src directory

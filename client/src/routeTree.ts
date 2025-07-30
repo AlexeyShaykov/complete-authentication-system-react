@@ -12,8 +12,8 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
-// import { Route as AuthSignupImport } from './routes/auth/signup'
-// import { Route as AuthSigninImport } from './routes/auth/signin'
+import { Route as AuthSignupImport } from './routes/auth/signup'
+import { Route as AuthSigninImport } from './routes/auth/signin'
 // import { Route as AuthChangeEmailImport } from './routes/auth/change-email'
 
 // Create/Update Routes
@@ -24,17 +24,17 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-// const AuthSignupRoute = AuthSignupImport.update({
-//   id: '/auth/signup',
-//   path: '/auth/signup',
-//   getParentRoute: () => rootRoute,
-// } as any)
+const AuthSignupRoute = AuthSignupImport.update({
+  id: '/auth/signup',
+  path: '/auth/signup',
+  getParentRoute: () => rootRoute,
+} as any)
 
-// const AuthSigninRoute = AuthSigninImport.update({
-//   id: '/auth/signin',
-//   path: '/auth/signin',
-//   getParentRoute: () => rootRoute,
-// } as any)
+const AuthSigninRoute = AuthSigninImport.update({
+  id: '/auth/signin',
+  path: '/auth/signin',
+  getParentRoute: () => rootRoute,
+} as any)
 
 // const AuthChangeEmailRoute = AuthChangeEmailImport.update({
 //   id: '/auth/change-email',
@@ -60,20 +60,20 @@ declare module '@tanstack/react-router' {
     //   preLoaderRoute: typeof AuthChangeEmailImport
     //   parentRoute: typeof rootRoute
     // }
-    // '/auth/signin': {
-    //   id: '/auth/signin'
-    //   path: '/auth/signin'
-    //   fullPath: '/auth/signin'
-    //   preLoaderRoute: typeof AuthSigninImport
-    //   parentRoute: typeof rootRoute
-    // }
-    // '/auth/signup': {
-    //   id: '/auth/signup'
-    //   path: '/auth/signup'
-    //   fullPath: '/auth/signup'
-    //   preLoaderRoute: typeof AuthSignupImport
-    //   parentRoute: typeof rootRoute
-    // }
+    '/auth/signin': {
+      id: '/auth/signin'
+      path: '/auth/signin'
+      fullPath: '/auth/signin'
+      preLoaderRoute: typeof AuthSigninImport
+      parentRoute: typeof rootRoute
+    }
+    '/auth/signup': {
+      id: '/auth/signup'
+      path: '/auth/signup'
+      fullPath: '/auth/signup'
+      preLoaderRoute: typeof AuthSignupImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -82,23 +82,23 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   // '/auth/change-email': typeof AuthChangeEmailRoute
-  // '/auth/signin': typeof AuthSigninRoute
-  // '/auth/signup': typeof AuthSignupRoute
+  '/auth/signin': typeof AuthSigninRoute
+  '/auth/signup': typeof AuthSignupRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   // '/auth/change-email': typeof AuthChangeEmailRoute
-  // '/auth/signin': typeof AuthSigninRoute
-  // '/auth/signup': typeof AuthSignupRoute
+  '/auth/signin': typeof AuthSigninRoute
+  '/auth/signup': typeof AuthSignupRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   // '/auth/change-email': typeof AuthChangeEmailRoute
-  // '/auth/signin': typeof AuthSigninRoute
-  // '/auth/signup': typeof AuthSignupRoute
+  '/auth/signin': typeof AuthSigninRoute
+  '/auth/signup': typeof AuthSignupRoute
 }
 
 export interface FileRouteTypes {
@@ -113,15 +113,15 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   // AuthChangeEmailRoute: typeof AuthChangeEmailRoute
-  // AuthSigninRoute: typeof AuthSigninRoute
-  // AuthSignupRoute: typeof AuthSignupRoute
+  AuthSigninRoute: typeof AuthSigninRoute
+  AuthSignupRoute: typeof AuthSignupRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   // AuthChangeEmailRoute: AuthChangeEmailRoute,
-  // AuthSigninRoute: AuthSigninRoute,
-  // AuthSignupRoute: AuthSignupRoute,
+  AuthSigninRoute: AuthSigninRoute,
+  AuthSignupRoute: AuthSignupRoute,
 }
 
 export const routeTree = rootRoute
