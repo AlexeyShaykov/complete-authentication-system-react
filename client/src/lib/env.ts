@@ -22,6 +22,8 @@ const envSchema = z.object({
   VITE_API_BASE_URL: z.string().url(),
 });
 
-const env = envSchema.parse(import.meta.env);
+export const env = envSchema.parse({
+  VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
+});
 
 export default env;
