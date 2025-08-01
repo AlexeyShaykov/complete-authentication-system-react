@@ -21,7 +21,9 @@ It’s fast, customizable, and production-ready.
 
 🖥️ Demo
 
-<img src="./client/public/imgs/1.png" width=300> <img src="./client/public/imgs/2.png" width=300>
+Check out the live demo: [Complete Authentication System](https://complete-authentication-system-react-1.onrender.com/)
+
+<img src="./client/public/imgs/1.png" width=300 height=300> <img src="./client/public/imgs/2.png" width=300 height=300>
 
 
 ⸻
