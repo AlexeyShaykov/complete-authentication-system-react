@@ -11,11 +11,11 @@ It’s fast, customizable, and production-ready.
 
 ✨ Features
 
-	•	🔒 Secure Authentication – Robust session management powered by SuperTokens.
-	•	⚡ Modern Frontend – Built with React, Vite, and TailwindCSS.
-	•	📡 Scalable Backend – Node.js + Express for flexible authentication logic.
-	•	🔄 Session Management – Automatic refresh token handling.
-	•	🛠️ Customizable – Add social logins, MFA, or custom flows easily.
+	🔒 Secure Authentication – Robust session management powered by SuperTokens.
+	⚡ Modern Frontend – Built with React, Vite, and TailwindCSS.
+	📡 Scalable Backend – Node.js + Express for flexible authentication logic.
+	🔄 Session Management – Automatic refresh token handling.
+	🛠️ Customizable – Add social logins, MFA, or custom flows easily.
 
 ⸻
 
