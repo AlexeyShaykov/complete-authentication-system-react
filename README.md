@@ -23,7 +23,7 @@ It’s fast, customizable, and production-ready.
 
 Check out the live demo: [Complete Authentication System](https://complete-authentication-system-react-1.onrender.com/)
 
-<img src="./client/public/imgs/1.png" width=300 height=300> <img src="./client/public/imgs/2.png" width=300 height=300>
+<img src="./client/public/imgs/1.png" width=300 height=300 style="min-height: 200px;"> <img src="./client/public/imgs/2.png" width=300 height=300 style="min-height: 200px;">
 
 
 ⸻
