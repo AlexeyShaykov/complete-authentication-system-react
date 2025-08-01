@@ -81,6 +81,7 @@ Manages authentication logic, sessions, and SuperTokens integration.
 ⸻
 
 🛠️ Technologies (Server Side)
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
 ![SuperTokens](https://img.shields.io/badge/SuperTokens-00A3FF?style=for-the-badge&logo=supertokens&logoColor=white)
