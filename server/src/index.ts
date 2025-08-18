@@ -51,6 +51,48 @@ app.get("/", (req: Request, res: Response) => {
   res.json({ message: "Server is running with SuperTokens!" });
 });
 
+app.post(
+  "/change-email",
+  verifySession(),
+  async (req: SessionRequest, res: express.Response) => {
+    let session = req.session!;
+    let email = req.body.email;
+
+    const emailSchema = z.string().email();
+    const result = emailSchema.safeParse(email);
+
+    if (!result.success) {
+      res.status(400).json({ error: "Invalid email address" });
+      return;
+    }
+
+    // Update the email without requiring a password
+    const resp = await EmailPassword.updateEmailOrPassword({
+      recipeUserId: session.getRecipeUserId(),
+      email: email,
+    });
+
+    if (resp.status === "OK") {
+      res.status(200).json({ message: "Email updated successfully" });
+      return;
+    }
+    if (resp.status === "EMAIL_ALREADY_EXISTS_ERROR") {
+      res
+        .status(403)
+        .json({ error: "Email already exists. Please use a different email." });
+      return;
+    }
+    if (resp.status === "EMAIL_CHANGE_NOT_ALLOWED_ERROR") {
+      res
+        .status(403)
+        .json({ error: "Email change not allowed. Please contact support." });
+      return;
+    }
+
+    res.status(500).json({ error: "Internal server error" });
+  }
+);
+
 
 app.use(errorHandler());
 

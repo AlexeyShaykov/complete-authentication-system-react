@@ -12,7 +12,7 @@ It’s fast, customizable, and production-ready.
 ✨ Features
 
 	🔒 Secure Authentication – Robust session management powered by SuperTokens.
-	⚡ Modern Frontend – Built with React, Vite, and TailwindCSS.
+	⚡ Modern Frontend – Built with React 19, Vite, and TailwindCSS.
 	📡 Scalable Backend – Node.js + Express for flexible authentication logic.
 	🔄 Session Management – Automatic refresh token handling.
 	🛠️ Customizable – Add social logins, MFA, or custom flows easily.
@@ -23,7 +23,7 @@ It’s fast, customizable, and production-ready.
 
 Check out the live demo: [Complete Authentication System](https://complete-authentication-system-react-1.onrender.com/)
 
-<img src="./client/public/imgs/1.png" width=300 height=300 style="min-height: 200px;"> <img src="./client/public/imgs/2.png" width=300 height=300 style="min-height: 200px;"> <img src="./client/public/imgs/3.png" width=300 height=300 style="min-height: 200px;">
+<img src="./client/public/imgs/1.png" width=300 height=300 style="min-height: 200px;"> <img src="./client/public/imgs/2.png" width=300 height=300 style="min-height: 200px;"> <img src="./client/public/imgs/3.png" width=300 height=300 style="min-height: 200px;"><img src="./client/public/imgs/4.png" width=300 height=300 style="min-height: 200px;">
 
 
 ⸻

@@ -22,4 +22,4 @@ const envSchema = z.object({
 export const env = envSchema.parse(process.env);
 
 console.log(`✅ Loaded env from ${envFile}`);
-console.log(`🌍 NODE_ENV = ${process.env.NODE_ENV}`);
+console.log(`🌍 NODE_ENV = ${process.env.NODE_ENV ? process.env.NODE_ENV : 'development'}`);

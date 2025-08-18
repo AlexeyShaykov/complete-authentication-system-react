@@ -17,7 +17,7 @@ const App = () => {
             Welcome,
             {userId}
           </div>
-          {/* <Link to="/auth/change-email">Change email</Link> */}
+          <Link to="/auth/change-email">Change email</Link>
           <Button
             onClick={() => {
               signOut();
