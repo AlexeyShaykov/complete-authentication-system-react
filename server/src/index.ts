@@ -102,6 +102,6 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📊 SuperTokens APIs available at http://localhost:${PORT}/auth`);
+  console.log(`🚀 Server running on ${env.API_BASE_URL}`);
+  console.log(`📊 SuperTokens APIs available at ${env.API_BASE_URL}/auth`);
 });

@@ -78,6 +78,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: "Internal server error" });
 });
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-    console.log(`📊 SuperTokens APIs available at http://localhost:${PORT}/auth`);
+    console.log(`🚀 Server running on ${env_1.env.API_BASE_URL}`);
+    console.log(`📊 SuperTokens APIs available at ${env_1.env.API_BASE_URL}/auth`);
 });
